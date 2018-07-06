@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	private float alturaTronco;
 	// variaveis da tree
 	public GameObject[] troncos;
 	public List<GameObject> listaTroncos;
