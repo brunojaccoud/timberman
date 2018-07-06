@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Game : MonoBehaviour {
+public class GameManager : MonoBehaviour {
 
-	//variaveis da tree
 	private float alturaTronco;
-	private float posicaoInicialY;
+	// variaveis da tree
+	public GameObject[] troncos;
+	public List<GameObject> listaTroncos;
+
+
+	private float alturaTronco = 2.43f;
+	private float posicaoInicialY = -4f;
 	private int maxTroncos = 6;
 	private bool troncoSemGalho = false;
 
@@ -18,5 +23,12 @@ public class Game : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	void CriaTroncos(int posicao) {
+		GameObject tronco = Instantiate(troncoSemGalho ? troncos [Random.Range (0,3)] : troncos[0]);
+		tronco.transform.localPosition = new Vector3 (0f, posicaoInicialY + posicao * alturaTronco, 0f);
+		listaTroncos.Add(tronco);
+		troncoSemGalho = !troncoSemGalho;
 	}
 }
