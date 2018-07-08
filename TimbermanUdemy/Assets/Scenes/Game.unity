@@ -291,13 +291,7 @@ MonoBehaviour:
   - {fileID: 1722848970964728, guid: 369decb46f2b5b54b89c2f51c3af19e7, type: 2}
   - {fileID: 1985078376445722, guid: 81ac266607d15b84287a0e3bda25e0d2, type: 2}
   - {fileID: 1463203916494678, guid: 31a709cc8aea71c45a1a4f8cc405e8ca, type: 2}
-  listaTroncos:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  listaTroncos: []
 --- !u!4 &961262582
 Transform:
   m_ObjectHideFlags: 0

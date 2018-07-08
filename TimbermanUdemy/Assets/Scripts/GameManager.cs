@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour {
 
 	void CriaTroncos(int posicao) {
 		GameObject tronco = Instantiate(troncoSemGalho ? troncos [Random.Range (0,3)] : troncos[0]);
-		tronco.transform.localPosition = new Vector3 (-0.05f, posicaoInicialY + posicao * alturaTronco, 0f);
+		tronco.transform.localPosition = new Vector3 (0f, posicaoInicialY + posicao * alturaTronco, 0f);
 		listaTroncos.Add(tronco);
 		troncoSemGalho = !troncoSemGalho;
 	}
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour {
 
 	void ReposicionaTronco() {
 		for (int posicao = 0; posicao < listaTroncos.Count; posicao++) {
-			listaTroncos[posicao].transform.localPosition = new Vector3 (-0.05f, posicaoInicialY + posicao * alturaTronco, 0f);
+			listaTroncos[posicao].transform.localPosition = new Vector3 (0, (posicaoInicialY + posicao * alturaTronco), 0f);
 		}
 		CriaTroncos(maxTroncos);
 	}
