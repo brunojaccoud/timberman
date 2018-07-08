@@ -6,7 +6,7 @@ public class Player : MonoBehaviour {
 
 	private SpriteRenderer Sprite;
 	private Animator anim;
-	private string ladoAtual = "E"; //E == Esquerda D == Direita
+	private string ladoAtual = "E"; //E == Esquerda D == Direita;
 
 	// Use this for initialization
 	void Start () {
